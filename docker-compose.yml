@@ -1,0 +1,27 @@
+services:
+  ollama:
+    container_name: ollama
+    image: ollama/ollama
+    ports: 
+      - "11434:11434"
+    volumes:
+      -  ollama:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+  openwebui:
+    container_name: openwebui
+    image: ghcr.io/open-webui/open-webui:cuda
+    depends_on:
+      - ollama
+    ports: 
+      - "3003:8080"
+    volumes:
+      - open-webui:/app/backend/data
+volumes:
+  ollama:
+  open-webui:

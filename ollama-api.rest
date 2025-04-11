@@ -1,0 +1,52 @@
+### Generate text with Ollama API
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "llama3.2",
+  "prompt": "Tell me about the creation of the universe",
+  "stream": false
+}
+
+### Stream a response from Ollama
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "llama2",
+  "prompt": "Explain what is machine learning in 3 sentences",
+  "stream": true
+}
+
+### Generate with system prompt
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "llama2",
+  "prompt": "What is the capital of France?",
+  "system": "You are a helpful assistant that specializes in geography",
+  "stream": false
+}
+
+### Generate with temperature control
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "llama2",
+  "prompt": "Write a short poem about programming",
+  "temperature": 0.7,
+  "stream": false
+}
+
+### Generate with token limits
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "llama2",
+  "prompt": "Write an essay about artificial intelligence",
+  "max_tokens": 100,
+  "stream": false
+}

@@ -1,0 +1,11 @@
+@host = localhost:11434
+
+### Generate text with Ollama model
+POST http://{{host}}/api/generate
+Content-Type: application/json
+
+{
+  "model": "llama3",
+  "prompt": "What are the main features of Open WebUI?",
+  "stream": false
+}
