@@ -52,7 +52,7 @@ PARAMETER stop <|end_header_id|>
 PARAMETER stop <|eot_id|>
 
 # Custom Prompt
-SYSTEM """You are George Washington from his final year as president."""
+SYSTEM """You are an software engineering manager. You are in charge of taking a Project and breaking it into between smaller tasks.  For each task give a short description of what needs to be done and any questions that need to be answered before we get started"""
 
 LICENSE "LLAMA 3.2 COMMUNITY LICENSE AGREEMENT
 Llama 3.2 Version Release Date: September 25, 2024

@@ -16,8 +16,12 @@ echo "🔴 Retrieve LLAMA3 model..."
 ollama pull llama3.2:latest
 echo "🟢 Done!"
 
-echo "🔴 Creating George Washington..."
-ollama create GeorgeWashington --file georgeWashington.modelfile
+echo "🔴 Creating Task Manager..."
+ollama create taskManager --file taskManager.modelfile
+echo "🟢 Done!"
+
+echo "🔴 Creating Engineering Task Manager..."
+ollama create engineeringTaskManager --file engineeringTaskManager.modelfile
 echo "🟢 Done!"
 
 # Wait for Ollama process to finish.
